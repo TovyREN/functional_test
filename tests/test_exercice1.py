@@ -1,20 +1,21 @@
-def test_add(self, a, b):
-    assert a + b == self.add(a, b)
+import sys
+sys.path.append('../')
+from exercice1 import Calculator
 
-def test_subtract(self, a, b):
-    assert a - b == self.subtract(a, b)
+def test_add():
+    assert Calculator.add(Calculator, 1, 2) == 3
 
-def test_multiply(self, a, b):
-    assert a * b == self.multiply(a, b)
+def test_subtract():
+    assert Calculator.subtract(Calculator, 1, 2) == -1
 
-def test_divide(self, a, b):
-    assert a / b == self.divide(a, b)
+def test_multiply():
+    assert Calculator.multiply(Calculator, 1, 2) == 2
 
-def test_power(self, a, b):
-    assert a ** b == self.power(a, b)
+def test_divide():
+    assert Calculator.divide(Calculator, 1, 2) == 0.5
 
-def test_sqrt(self, a):
-    assert a ** 0.5 == self.sqrt(a)
+def test_power():
+    assert Calculator.power(Calculator, 1, 2) == 1
 
-def test_clear_memory(self):
-    self.memory == 0
+def test_sqrt():
+    assert Calculator.sqrt(Calculator, 1) == 1
